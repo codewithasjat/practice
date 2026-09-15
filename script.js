@@ -69,49 +69,49 @@
 //     }
 // }
 
-let arr = [8,3,5,1,4,2,7]
+// let arr = [8,3,5,1,4,2,7]
 
-function mergeSort(arr,l,h){
-   if(l>= h) return
-   let mid = Math.floor((l+h)/2)
-   mergeSort(arr,l,mid)
-   mergeSort(arr,mid+1,h)
-   merge(arr,l,mid,h)
+// function mergeSort(arr,l,h){
+//    if(l>= h) return
+//    let mid = Math.floor((l+h)/2)
+//    mergeSort(arr,l,mid)
+//    mergeSort(arr,mid+1,h)
+//    merge(arr,l,mid,h)
 
-}
+// }
 
- function merge(arr,l,mid,h){
-   let left = l
-   let right = mid +1
-   let temp =[]
-   while(left<=mid && right<= h){
-      if(arr[left]<=arr[right]){
-         temp.push(arr[left])
-         left++
-      }
-      else{
-         temp.push(arr[right])
-         right++
-      }
-   }
-   while(left<= mid){
-      temp.push(arr[left])
-      left++
+//  function merge(arr,l,mid,h){
+//    let left = l
+//    let right = mid +1
+//    let temp =[]
+//    while(left<=mid && right<= h){
+//       if(arr[left]<=arr[right]){
+//          temp.push(arr[left])
+//          left++
+//       }
+//       else{
+//          temp.push(arr[right])
+//          right++
+//       }
+//    }
+//    while(left<= mid){
+//       temp.push(arr[left])
+//       left++
       
-   }
-   while(right<= h){
-      temp.push(arr[right])
-      right++
+//    }
+//    while(right<= h){
+//       temp.push(arr[right])
+//       right++
       
-   }
-   for(let i=l; i<=h ;i++){
-      arr[i]=temp[i-l]
-   }
+//    }
+//    for(let i=l; i<=h ;i++){
+//       arr[i]=temp[i-l]
+//    }
 
-}
+// }
 
-mergeSort(arr,0,arr.length-1)
-console.log(arr);
+// mergeSort(arr,0,arr.length-1)
+// console.log(arr);
 
 // let arr = [1,2,3,4,5]
 
@@ -152,6 +152,67 @@ console.log(arr);
 
 
 
+//   let arr3 =[5,3,2,1,4,5,3,2]
+// function mergeSort(arr,l,h){
+//    if(l>=h)return
+//    let mid = Math.floor((l+h)/2)
+//    mergeSort(arr,l,mid)
+//    mergeSort(arr,mid+1,h)
+//    merge(arr,l,mid,h)
+
+// }
+// function merge(arr,l,mid,h){
+//    let left=l
+//    let right = mid +1
+//    let temp = []
+//    while(left<=mid && right<=h)
+//       if(arr[left]<=arr[right]){
+//          temp.push(arr[left])
+//          left++
+//       }
+//       else{
+//          temp.push(arr[right])
+//          right++
+//       }
+
+//       while(left<=mid){
+//          temp.push(arr[left])
+//          left++
+//       }
+//       while(right<=h){
+//          temp.push(arr[right])
+//          right++
+//       }
+//       for(let i=l ; i<=h ; i++){
+//          arr[i] = temp[i-l]
+//       }
+
+// }
+
+// mergeSort(arr3,0,arr3.length-1)
+// console.log(arr3);
+ 
+
+ function isPrime(num){
+if(1>=num) return
+for (let i=2 ; i<num ;i++){
+   if(num%i===0){
+      return false
+   }
+}
+return true
+ }
+
+ function countPrime(num){
+   let arr = []
+   for(let i=0 ; i<num ; i++){
+      if(isPrime(i)){
+       arr.push(i)
+      }
+   }
+   return arr
+ }
+ console.log(countPrime(100));
 
 
 
