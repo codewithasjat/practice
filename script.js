@@ -1,0 +1,158 @@
+// let data = [
+//     {name:"Abhishek","mobile":"000000000",state:{city:"Pune"}},
+//     {name:"Alin","mobile":"000000000",state:{city:"Mumbai"}},
+//     {name:"Rohit","mobile":"000000000",state:{city:"Nashik"}},
+//     {name:"Anirudh","mobile":"000000000",state:{city:"Pune"}},
+//     {name:"Avnish","mobile":"000000000",state:{city:"Nashik"}},
+// ]
+
+// let datas = [
+//     {
+//         "firstName": "John",
+//         "lastName": "Doe",
+//         "email": "john.doe@example.com",
+//         "department": "Engineering"
+//     },
+//     {
+//         "firstName": "Emily",
+//         "lastName": "Smith",
+//         "email": "emily.smith@example.com",
+//         "department": "Engineering"
+//     },
+//     {
+//         "firstName": "Michael",
+//         "lastName": "Johnson",
+//         "email": "michael.johnson@example.com",
+//         "department": "Finance"
+//     },
+//     {
+//         "firstName": "Sophia",
+//         "lastName": "Williams",
+//         "email": "sophia.williams@example.com",
+//         "department": "Finance"
+//     },
+//     {
+//         "firstName": "David",
+//         "lastName": "Brown",
+//         "email": "david.brown@example.com",
+//         "department": "Sales"
+//     }
+// ]
+// const groupDepartment = (datas) => {
+
+//     let result = [];
+
+//     for (let data of datas) {
+
+//         let department = data.department;
+
+//         if (!result[department]) {
+//             result[department] = [];
+//         }
+
+//         result[department].push(data.firstName);
+//     }
+
+//     console.log(result);
+// };
+
+// groupDepartment(datas);
+
+
+
+// let arr1=[1,2,3,4]
+// let arr2=[12,5,2]
+// let st = new Set(arr1)
+// for (let elemnt of arr2){
+//     if(st.has(elemnt)){
+//         console.log(elemnt);
+//     }
+// }
+
+let arr = [8,3,5,1,4,2,7]
+
+function mergeSort(arr,l,h){
+   if(l>= h) return
+   let mid = Math.floor((l+h)/2)
+   mergeSort(arr,l,mid)
+   mergeSort(arr,mid+1,h)
+   merge(arr,l,mid,h)
+
+}
+
+ function merge(arr,l,mid,h){
+   let left = l
+   let right = mid +1
+   let temp =[]
+   while(left<=mid && right<= h){
+      if(arr[left]<=arr[right]){
+         temp.push(arr[left])
+         left++
+      }
+      else{
+         temp.push(arr[right])
+         right++
+      }
+   }
+   while(left<= mid){
+      temp.push(arr[left])
+      left++
+      
+   }
+   while(right<= h){
+      temp.push(arr[right])
+      right++
+      
+   }
+   for(let i=l; i<=h ;i++){
+      arr[i]=temp[i-l]
+   }
+
+}
+
+mergeSort(arr,0,arr.length-1)
+console.log(arr);
+
+// let arr = [1,2,3,4,5]
+
+// function maximumNumber(arr){
+//    if (arr.length ===0) return 
+
+//    maximumNumber(arr[])
+
+// }
+// maximumNumber(arr)
+
+
+// let arr2 = [1,2,3,5,3]
+// function isSorted(arr2,i){
+//    if(i == arr.length) return true;
+//    if(arr[i]<arr[i-1]) return false;
+//     return isSorted(arr2 ,i+1)
+ 
+// }
+// console.log(isSorted(arr2,1));
+
+// function Palindrome(str,left ,right){
+//    if(str[left]===str[right]) true ;
+//    if(!str[left] === str[right]){
+//       left++
+//       right--
+//    }
+
+
+
+
+
+// }
+
+// console.log(Palindrome("rer",0,str.length-1 ));
+
+
+
+
+
+
+
+
+
