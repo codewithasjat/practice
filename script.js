@@ -193,26 +193,18 @@
 // console.log(arr3);
  
 
- function isPrime(num){
-if(1>=num) return
-for (let i=2 ; i<num ;i++){
-   if(num%i===0){
-      return false
-   }
-}
-return true
+ let num =7 
+ for(let i=0 ; i<= num ;i++){
+   let str=""
+  for(let j=0 ; j<=i; j++){
+     
+   str += String.fromCharCode(65 +j)
+
+  }
+   console.log(str);
  }
 
- function countPrime(num){
-   let arr = []
-   for(let i=0 ; i<num ; i++){
-      if(isPrime(i)){
-       arr.push(i)
-      }
-   }
-   return arr
- }
- console.log(countPrime(100));
+
 
 
 
