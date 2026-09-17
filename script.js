@@ -210,7 +210,7 @@
 // }
 //  console.log(findUnique(arr ));
 
-let arr =[4,2,3,5,1,2,6]
+// let arr =[4,2,3,5,1,2,6]
 //  function mergeSort(arr,l,h){
 //    if(l>=h) return;
 //    let mid = Math.floor((l+h)/2)
@@ -250,41 +250,58 @@ let arr =[4,2,3,5,1,2,6]
 //  console.log(arr);
 
 
- function mergeSort(arr,l,h){
-   if(l>=h) return ;
-   let mid = Math.floor((l+h)/2)
-   mergeSort(arr,l,mid)
-   mergeSort(arr,mid+1,h)
-   merge(arr,l,mid,h)
+//  function mergeSort(arr,l,h){
+//    if(l>=h) return ;
+//    let mid = Math.floor((l+h)/2)
+//    mergeSort(arr,l,mid)
+//    mergeSort(arr,mid+1,h)
+//    merge(arr,l,mid,h)
 
- }
-  function merge(arr,l,mid,h){
-   let left =l
-   let right = mid+1
-   let temp =[]
-   while(left<=mid && right <=h){
-      if(arr[left]<= arr[right]){
-         temp.push(arr[left])
-         left++
-      }
-      else{
-         temp.push(arr[right])
-         right++
-      }
+//  }
+//   function merge(arr,l,mid,h){
+//    let left =l
+//    let right = mid+1
+//    let temp =[]
+//    while(left<=mid && right <=h){
+//       if(arr[left]<= arr[right]){
+//          temp.push(arr[left])
+//          left++
+//       }
+//       else{
+//          temp.push(arr[right])
+//          right++
+//       }
+//    }
+//   while(left<=mid){
+//    temp.push(arr[left])
+//    left++
+//   }
+//   while(right<=h){
+//    temp.push(arr[right])
+//    right++
+//   }
+// for(let i=l ; i<=h ; i++ ){
+//    arr[i]=temp[i-l]
+// }
+//  }
+//  mergeSort(arr,0,arr.length-1)
+//  console.log(arr);
+
+ let arr = [3,4,1,7,2];
+
+for (let j=0 ;j<arr.length ; j++){
+
+
+ for(let i=j+1 ; i<arr.length ;i++ ){
+   if(arr[i]>arr[j]){
+      let temp = arr[i]
+      arr[i] = arr[j]
+      arr[j]=temp
+
+
    }
-  while(left<=mid){
-   temp.push(arr[left])
-   left++
-  }
-  while(right<=h){
-   temp.push(arr[right])
-   right++
-  }
-for(let i=l ; i<=h ; i++ ){
-   arr[i]=temp[i-l]
-}
  }
- mergeSort(arr,0,arr.length-1)
+}
  console.log(arr);
 
 
